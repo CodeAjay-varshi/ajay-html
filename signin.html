@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign In</title>
+  <style>
+    body {
+      background-color: aliceblue;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      background-color: #04345e;
+      color: white;
+      width: 300px;
+      margin: 100px auto;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .container input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .container button {
+      width: 95%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background-color: rgb(42, 236, 116);
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .error {
+      color: yellow;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Sign In</h2>
+    <form onsubmit="return validateSignIn()">
+      <input type="text" id="email" placeholder="Email">
+      <div id="emailError" class="error"></div>
+
+      <input type="password" id="password" placeholder="Password">
+      <div id="passwordError" class="error"></div>
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    function validateSignIn() {
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+      let valid = true;
+
+    //  document.getElementById("emailError").textContent = "";
+     // document.getElementById("passwordError").textContent = "";
+
+      if (!email.includes("@")) {
+        document.getElementById("emailError").textContent = "* Invalid email";
+        valid = false;
+      }
+
+      if (password!="123456789") {
+        document.getElementById("passwordError").textContent = "* wrong password the right one is 123456789";
+        valid = false;
+      }
+
+      if (valid) {
+        alert("Sign in successful!");
+      }
+
+      return valid;
+    }
+  </script>
+
+</body>
+</html>

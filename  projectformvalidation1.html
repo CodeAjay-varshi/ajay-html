@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+    </head>
+    <style>
+        body{
+           background-color: aliceblue;
+        }
+        h1 { color:rgb(4, 201, 109);
+
+        }
+        p{  color:rgb(178, 218, 235);
+        }
+    </style>
+    <body  >
+        <br>
+        <br>
+
+ 
+        <div style=" text-align:center; margin: 0 auto; background-color: rgb(3, 29, 59); width:300px ;border-radius: 22px;">
+           <br>
+           
+            <h1 >REGISTER</h1>
+            <p > Sign up now any get full access</p>
+
+
+
+
+
+
+
+            <form  onsubmit=" return validateForm()" >
+                <!--  dispaly:fkex means the child means the inputs align in a row   -->
+<!--  gap mea they are alligned in a row and it has the gap 1 -->
+
+
+<!-- INPUT FORMS ARE STRAT FROM HERE -->
+<!--  FIRST NAME , SECOND NAME -->
+             <div  style="display: flex; gap: 8px;"> 
+                 <p>    </p> <input type="text" id="firstName" placeholder="Firstname"  style="width: 45%; padding: 10px; border: none; border-radius: 8px;">
+              <input type="text" id="secondName" placeholder="SecondName" style="width: 45%; padding: 10px; border: none; border-radius: 8px;"><p>    </p></div>
+              
+              <br>
+
+<!-- EMAIL -->
+
+
+
+                <div><input type="text" id="email" placeholder="Email" style="width: 80%; padding: 10px; border: none; border-radius: 8px;"></div><br>
+
+<!-- PASSWORD -->
+                <div><input type="password" id="password" placeholder="password" style="width: 80%; padding: 10px; border: none; border-radius: 8px;">
+                     <!-- <span onclick="togglePassword('password')" style="position: absolute; right: 10px; top: 12px; cursor: pointer;">👁️</span> -->
+                   
+                </div>
+                <br>
+<!--  CONFIRM PASSWORD -->
+ <div> <input type="password" id="confirmPassword" placeholder="confirm password"  style="width: 80%; padding: 10px; border: none; border-radius: 8px;" > </div>  <br>
+
+
+
+<!-- BUTTON -->
+               <div>
+                <button type="submit" style="width: 80%; padding: 10px; border: none; border-radius: 8px; background-color: rgb(61, 235, 38);"> SUBMIT</button>
+
+                    </div>
+
+                <p style=" text-align: center; color: aliceblue;"> Already  have an account ?<a href="/home/ajay/Documents/javascript/*TWO WAYS CODE WRITING IN JAVA/ *INTERNAL JS FILES.html/DOM(DOCUMENT OBJECT MODEL)/METHODS_OF _THE_DOM/FORMVALIDATIONPROJECT/signin.html" style="color:aquamarine">signin</a></p>
+
+                <br>
+
+
+
+            </form>
+
+
+
+            
+            
+
+
+
+        </div>
+ <script>
+    function validateForm() {
+      let firstname = document.getElementById("firstName").value;
+      let secondname = document.getElementById("secondName").value;
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+      let confirmPassword = document.getElementById("confirmPassword").value;
+
+      let valid = true;
+
+      if (firstname === "" || secondname === "" || !email.includes("@") || password.length < 6 || confirmPassword !== password) {
+        alert("Please fix all errors before submitting");
+        valid = false;
+      }
+
+
+
+
+
+
+
+      if (valid) {
+        alert("Form submitted successfully");
+      }
+
+      return valid;
+    }
+  </script> 
+ 
+
+<!-- for each one  -->
+<!-- 
+
+  <script>
+    function validateForm() {
+      let firstname = document.getElementById("firstName").value;
+      let secondname = document.getElementById("secondName").value;
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+      let confirmPassword = document.getElementById("confirmPassword").value;
+
+      let valid = true;
+
+      if (firstname === "" || secondname === "" || !email.includes("@") || password.length < 6 || confirmPassword !== password) {
+        alert("enter the correct first name");
+        valid = false;
+      }
+
+
+      if ( secondname === "" ) {
+        alert("enter valid second name");
+        valid = false;
+      }
+      
+      if (!email.includes("@") ) {
+        alert("enter valid email");
+        valid = false;
+      }
+
+      if ( password.length < 6 ) {
+        alert("enter valid password");
+        valid = false;
+      }
+
+      if (confirmPassword !== password) {
+        alert(" enter the correct password");
+        valid = false;
+      }
+
+
+      
+
+      if (valid) {
+        alert("Form submitted successfully");
+      }
+
+      return valid;
+    }
+  </script>  -->
+
+         
+
+    </body>
+</html>
+ 
+
+
+
+
+
+
+
+
+ 
